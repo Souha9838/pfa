@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>   
+<meta charset="utf-8"/>
+<title>Page d'acceuil </title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="topnav">
+        <a class="active"  href="index.html">Acceuil
+        </a>
+        <a href="hotel.html">Hotel</a>
+        <a href="partir a l'etranger.html">Partir a l'étranger</a>
+        <a href="omra.html">Omra</a>
+        <a href="convention.html">Conventions</a>
+        <div class="login-container">
+          <form action="/action_page.php">
+            <input type="text" placeholder="Matricule" name="username" width="8">
+            <input type="text" placeholder="Mot de passe" name="psw">
+            <button type="submit">Login</button>
+          </form>
+        </div>
+      </div>  
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+    <!-- Full-width images -->
+        <div class="mySlides fade">
+            <img src="slide1.PNG" style="width:100% "> 
+        </div>
+  
+        <div class="mySlides fade">
+            <img src="slide2.PNG" style="width:100%">
+        </div>
+  
+        <div class="mySlides fade">
+            <img src="slide3.PNG" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="slide4.PNG" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="slide5.PNG" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="slide6.PNG" style="width:100%">
+        </div>
+  
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+  
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="content-wrapper">
+        <div class="portfolio-items-wrapper">
+            <div class="portfolio-item-wrapper">
+                <div class="portfolio-img-background" style="background-image: url();"></div>
+                <div class="img-text-wrapper">
+                    <div class="logo-wrapper">
+                        <img>
+                    </div>
+                    <div class="subtitle">
+
+                    </div>
+                </div>
+            
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</html>
